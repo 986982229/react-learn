@@ -1,4 +1,5 @@
 # 从webpack开始练习react项目
+## 参照教程 https://github.com/brickspert/blog/issues/1
 ## 2020-04-07
  ### 目标：添加webpack react，babel 能打出静态包
  ### 步骤：
