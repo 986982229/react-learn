@@ -1,7 +1,7 @@
-#从webpack开始练习react项目
-##2020-04-07
- ###目标：添加webpack react，babel 能打出静态包
- ###步骤：
+# 从webpack开始练习react项目
+## 2020-04-07
+ ### 目标：添加webpack react，babel 能打出静态包
+ ### 步骤：
 * 1 安装npm i webpack webpack-cli --save-dev -g
 * 2 构建打包相关
 * 2.1 创建webpack.config.js文件，写入口文件和出口文件配置，并学习下path包的相关用法。
