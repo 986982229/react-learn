@@ -1,9 +1,10 @@
 import React from 'react';
 
 export default () => {
+  console.log('React Hello World');
   return (
     <div>
-      <span>React Hello World</span>
+      <span>React Hello fff</span>
     </div>
   );
 };

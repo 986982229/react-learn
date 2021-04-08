@@ -9,6 +9,10 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
+    port: 3000,
+    hot: true,
+    historyApiFallback: true, // 让所有的404定位到index.html。
+    host: 'localhost', // 一个局域网下别人使用你的ip可以访问
   },
   module: {
     rules: [
@@ -72,4 +76,5 @@ module.exports = {
       //     },
     ],
   },
+  plugins: [],
 };

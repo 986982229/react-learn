@@ -27,6 +27,34 @@
 * 4.1 添加依赖react react-dom react-router-dom
 * 4.2 修改index.js，添加React引用。--完成
 * 4.3 在src文件夹中添加index.js文件，创建一个React类型的文件。然后打包。
+## 2020-04-07
+* 5 构建简单web服务器 webpack-dev-server和webpack-dev-middleware
+## 参考网址 https://blog.csdn.net/qq_35732147/article/details/91038349
+* 5.1 webpack-dev-server 构建
+* 5.1.1 修改package.json的版本，webpack5.X不支持webpack-dev-server
+* ```javascript
+    // 原来
+    "webpack": "^5.31.0",
+    "webpack-cli": "^4.6.0",
+    // 修改后
+    "webpack": "4.33.0",
+    "webpack-cli": "3.3.0",
+    "webpack-dev-server": "^3.11.2"
+  ```
+* 5.1.2 修改webpack.dev.config.js
+  * ```javascript
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    port: 3000,
+    historyApiFallback: true,
+  },
+  ```
+* 5.1.3 修改package.json,添加脚本命令 "dev": "webpack-dev-server --config webpack.dev.config.js --open"
+* 5.1.4 运行npm run server
+* 5.1.5 删除 webpack 和webpack-cli，重新安装最新的依赖版本
 
-
+* 5.2 使用web-dev-middleware + express
+## 参考网址 https://segmentfault.com/a/1190000011761306
+* 5.2.1 创建server.js
+* 5.2.2 使用webpack-dev-middleware，启动服务后不能够打开浏览器，页面修改后，不能够自动刷新
 
