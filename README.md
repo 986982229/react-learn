@@ -53,8 +53,30 @@
 * 5.1.4 运行npm run server
 * 5.1.5 删除 webpack 和webpack-cli，重新安装最新的依赖版本
 
-* 5.2 使用web-dev-middleware + express
+* 5.2 使用web-dev-middleware + express (放弃)
 ## 参考网址 https://segmentfault.com/a/1190000011761306
 * 5.2.1 创建server.js
 * 5.2.2 使用webpack-dev-middleware，启动服务后不能够打开浏览器，页面修改后，不能够自动刷新
+## 2020-04-13
+* 参考网址：如上面5的网站
+* 6 添加css解析，图片解析，其他文件解析支持
+* 6.1 添加css解析style-loader 将打包好的css文件通过一个JS脚本创建一个style标签，里面包含一些样式， css-loader 将所有的css文件打包 // todo 浏览器兼容，less，sass，等。
+* 6.2 添加图片解析 url-loader
+* 6.3 添加字体文件打包 file-loader
+* 运行 npm run dev 和npm run build 运行成功,具体配置和解释看webpack.dev.config.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
