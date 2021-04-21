@@ -64,6 +64,27 @@
 * 6.2 添加图片解析 url-loader
 * 6.3 添加字体文件打包 file-loader
 * 运行 npm run dev 和npm run build 运行成功,具体配置和解释看webpack.dev.config.js
+## 2020-04-15
+* 7 添加路由
+## 参考网址 react-router和react-router-dom区别 https://github.com/mrdulin/blog/issues/42
+7.1 添加路由组件react-router-dom
+7.2
+8 添加redux0
+
+
+
+#  项目目标，UI框架使用Antd能够熟练配置，语言使用ts，最后能够打包可用。然后在看多文件优化
+
+
+需要学习的点：
+  1 import React, { Suspense, lazy } from 'react'; // Suspense lazy
+  2 import React, {createContext} from 'react';
+    React中context的概念，是会找到最近的Provider中的值，可以避免props的层级传递，暂时没有可用的需求。不适合存放主题，登录token的信息
+  3 错误边界，处理错误的地方，此demo应该拥有
+  4 高阶组件，禁用，因为封装起来太麻烦，也许可以有其他方式去解决
+  5 https://www.cnblogs.com/xianyulaodi/p/5338359.html 引用jquery
+
+
 
 
 

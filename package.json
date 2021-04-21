@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --config webpack.dev.config.js --open",
+    "dev": "webpack-dev-server --mode development --config webpack.dev.config.js --open --hot",
     "dev-server": "node server.js",
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode development --config webpack.dev.config.js",
