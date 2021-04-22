@@ -68,8 +68,15 @@
 * 7 添加路由
 ## 参考网址 react-router和react-router-dom区别 https://github.com/mrdulin/blog/issues/42
 7.1 添加路由组件react-router-dom
+## https://reactrouter.com/web/guides/quick-start
+## http://react-guide.github.io/react-router-cn/index.html
+
 7.2
+8 热更新
+## https://blog.csdn.net/qq_34035425/article/details/81749985?utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&dist_request_id=1332036.217.16190972864473975&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control
 8 添加redux0
+8.1
+
 
 
 
@@ -85,8 +92,24 @@
   5 https://www.cnblogs.com/xianyulaodi/p/5338359.html 引用jquery
 
 
+react-dom 学习笔记
+1 基本使用
+import {BrowserRouter, Route} from "react-router-dom"
+<BrowerRouter>
+  <Route exact path='/' component={Home}>
+  <Route exact path='/pageA' component={PageA}>
+  <Route component={E404}>
+</BrowserRouter>
+
+2 generatePath
+这个方法的使用场景是，可以动态的在路由中添加参数
+
+3 嵌套路由
 
 
+
+create-react-app
+## https://create-react-app.dev/docs/getting-started/
 
 
 

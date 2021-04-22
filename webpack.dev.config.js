@@ -1,18 +1,23 @@
-const path = require('path');
+const path = require("path");
+const webpack = require("webpack");
+
 module.exports = {
+  mode: "development",
   entry: {
-    main: path.join(__dirname, 'index.js'),
+    main: path.join(__dirname, "index.js"),
+    app: path.join(__dirname, "index.js"),
   },
   output: {
-    path: path.join(__dirname, 'dist'), // bundle生成emit到哪里
-    filename: 'bundle.js', // bundle生成文件的名称
+    path: path.join(__dirname, "dist"), // bundle生成emit到哪里
+    filename: "bundle.js", // bundle生成文件的名称
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, "dist"),
     port: 3000,
     hot: true,
     historyApiFallback: true, // 让所有的404定位到index.html。
-    host: 'localhost', // 一个局域网下别人使用你的ip可以访问
+    host: "localhost", // 一个局域网下别人使用你的ip可以访问
+    watchContentBase: true,
   },
   module: {
     rules: [
@@ -20,24 +25,24 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_module/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
         },
       },
       // 处理图片
       {
         test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-        loader: 'url-loader',
+        loader: "url-loader",
         options: {
           limit: 1024 * 22, // 10kb一下的图片，变成base64的文件
-          name: 'static/media/[name].[hash:8].[ext]', // 大于10kb的图片文件路径以及文件名称
+          name: "static/media/[name].[hash:8].[ext]", // 大于10kb的图片文件路径以及文件名称
         },
       },
       {
         test: /\.css$/,
         use: [
-          'style-loader',
+          "style-loader",
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               importLoaders: 0,
             },
@@ -49,7 +54,7 @@ module.exports = {
       // 字体文件打包
       {
         test: /\.(woff|woff2|eot|ttf)$/,
-        use: ['file-loader'],
+        use: ["file-loader"],
       },
 
       //     {
@@ -105,5 +110,8 @@ module.exports = {
       //     },
     ],
   },
-  plugins: [],
+  plugins: [
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 };

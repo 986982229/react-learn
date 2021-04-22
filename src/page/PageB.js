@@ -1,14 +1,14 @@
-import React, { Component, useEffect, useState } from 'react';
-import './PageA.css';
-import { useHistory } from 'react-router-dom';
+import React, { Component, useEffect, useState } from "react";
+import "./PageA.css";
+import { useHistory } from "react-router-dom";
 
 export default function PageB() {
   const history = useHistory();
 
-  useEffect(() => {
-    console.log('history: ', history);
-    console.log('param: ', history.location.state);
-  }, []);
+  // useEffect(() => {
+  //   console.log('history: ', history);
+  //   console.log('param: ', history.location.state);
+  // }, []);
 
   return (
     <div>
@@ -16,7 +16,7 @@ export default function PageB() {
       <div>
         <button
           onClick={() => {
-            history.push('/pageC', { cc: 'cc' });
+            history.push("/pageC", { cc: "cc" });
           }}
         >
           Jump to C
